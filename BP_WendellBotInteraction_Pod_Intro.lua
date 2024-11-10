@@ -1,0 +1,13 @@
+---@meta
+
+---@class ABP_WendellBotInteraction_Pod_Intro_C : ABP_WendellBotInteraction_ConditionalToggle_C
+---@field UberGraphFrame FPointerToUberGraphFrame
+---@field PodOpenedConditionalToggle UConditionalToggleComponent
+ABP_WendellBotInteraction_Pod_Intro_C = {}
+
+---@param bIsActive boolean
+function ABP_WendellBotInteraction_Pod_Intro_C:BndEvt__BP_WendellBotInteraction_Pod_Intro_PodOpenedConditionalToggle_K2Node_ComponentBoundEvent_1_OnConditionalStateChanged__DelegateSignature(bIsActive) end
+---@param EntryPoint int32
+function ABP_WendellBotInteraction_Pod_Intro_C:ExecuteUbergraph_BP_WendellBotInteraction_Pod_Intro(EntryPoint) end
+
+

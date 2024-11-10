@@ -1,0 +1,38 @@
+---@meta
+
+---@class UUI_Buttons_MainMenu_C : UMainMenuButtonsGroup
+---@field UberGraphFrame FPointerToUberGraphFrame
+---@field BG UImage
+---@field ButtonCredits UUI_MainMenuButton_C
+---@field ButtonMultiplayer UUI_MainMenuButton_C
+---@field ButtonOptions UUI_MainMenuButton_C
+---@field ButtonQuit UUI_MainMenuButton_C
+---@field ButtonSinglePlayer UUI_MainMenuButton_C
+---@field ButtonTestLevels UUI_MainMenuButton_C
+---@field MainMenuTitle ULocalizedTextBlock
+---@field OnSinglePlayerClicked FUI_Buttons_MainMenu_COnSinglePlayerClicked
+---@field OnMultiplayerClicked FUI_Buttons_MainMenu_COnMultiplayerClicked
+---@field OnCreditsClicked FUI_Buttons_MainMenu_COnCreditsClicked
+---@field OnOptionsClicked FUI_Buttons_MainMenu_COnOptionsClicked
+---@field OnTestLevelsClicked FUI_Buttons_MainMenu_COnTestLevelsClicked
+---@field OnQuitClicked FUI_Buttons_MainMenu_COnQuitClicked
+UUI_Buttons_MainMenu_C = {}
+
+function UUI_Buttons_MainMenu_C:OnGlobalColorChange() end
+function UUI_Buttons_MainMenu_C:BndEvt__UI_Buttons_MainMenu_ButtonSinglePlayer_K2Node_ComponentBoundEvent_0_OnButtonClicked__DelegateSignature() end
+function UUI_Buttons_MainMenu_C:BndEvt__UI_Buttons_MainMenu_ButtonMultiplayer_K2Node_ComponentBoundEvent_1_OnButtonClicked__DelegateSignature() end
+function UUI_Buttons_MainMenu_C:BndEvt__UI_Buttons_MainMenu_ButtonCredits_K2Node_ComponentBoundEvent_2_OnButtonClicked__DelegateSignature() end
+function UUI_Buttons_MainMenu_C:BndEvt__UI_Buttons_MainMenu_ButtonOptions_K2Node_ComponentBoundEvent_3_OnButtonClicked__DelegateSignature() end
+function UUI_Buttons_MainMenu_C:BndEvt__UI_Buttons_MainMenu_ButtonTestLevels_K2Node_ComponentBoundEvent_4_OnButtonClicked__DelegateSignature() end
+function UUI_Buttons_MainMenu_C:BndEvt__UI_Buttons_MainMenu_ButtonQuit_K2Node_ComponentBoundEvent_5_OnButtonClicked__DelegateSignature() end
+function UUI_Buttons_MainMenu_C:Construct() end
+---@param EntryPoint int32
+function UUI_Buttons_MainMenu_C:ExecuteUbergraph_UI_Buttons_MainMenu(EntryPoint) end
+function UUI_Buttons_MainMenu_C:OnQuitClicked__DelegateSignature() end
+function UUI_Buttons_MainMenu_C:OnTestLevelsClicked__DelegateSignature() end
+function UUI_Buttons_MainMenu_C:OnOptionsClicked__DelegateSignature() end
+function UUI_Buttons_MainMenu_C:OnCreditsClicked__DelegateSignature() end
+function UUI_Buttons_MainMenu_C:OnMultiplayerClicked__DelegateSignature() end
+function UUI_Buttons_MainMenu_C:OnSinglePlayerClicked__DelegateSignature() end
+
+

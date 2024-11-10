@@ -1,0 +1,24 @@
+---@meta
+
+---@class AAR_30_Design_Actors_C : ALevelScriptActor
+---@field UberGraphFrame FPointerToUberGraphFrame
+---@field BP_BossManager_Schmector_ExecuteUbergraph_AR_30_Design_Actors_RefProperty ABP_BossManager_C
+---@field BP_Lab_Door_A78_ExecuteUbergraph_AR_30_Design_Actors_RefProperty ABP_Lab_Door_A_C
+---@field BP_Lab_Door_A73_15_ExecuteUbergraph_AR_30_Design_Actors_RefProperty ABP_Lab_Door_A_C
+---@field BP_Schmector_ConditionalToggle_ExecuteUbergraph_AR_30_Design_Actors_RefProperty ABP_BAH_BossStateManager_C
+AAR_30_Design_Actors_C = {}
+
+---@param ActorDamageSource AActor
+function AAR_30_Design_Actors_C:BndEvt__AR_30_Design_Actors_BP_BossManager_Schmector_K2Node_ActorBoundEvent_1_BossCompleteDelegate__DelegateSignature(ActorDamageSource) end
+function AAR_30_Design_Actors_C:BndEvt__AR_30_Design_Actors_BP_Schmector_Door_Manager_2_K2Node_ActorBoundEvent_2_WendellOpensOminentDoor__DelegateSignature() end
+function AAR_30_Design_Actors_C:BndEvt__AR_30_Design_Actors_BP_BossManager_Schmector_K2Node_ActorBoundEvent_3_BossActivateDelegate__DelegateSignature() end
+function AAR_30_Design_Actors_C:ReceiveBeginPlay() end
+---@param bIsActive boolean
+function AAR_30_Design_Actors_C:OnBossToggleActivate(bIsActive) end
+---@param TriggerActor AActor
+---@param OtherActor AActor
+function AAR_30_Design_Actors_C:BndEvt__AR_30_Design_Actors_MaineTriggerBox_1_K2Node_ActorBoundEvent_4_TriggerDelegate__DelegateSignature(TriggerActor, OtherActor) end
+---@param EntryPoint int32
+function AAR_30_Design_Actors_C:ExecuteUbergraph_AR_30_Design_Actors(EntryPoint) end
+
+

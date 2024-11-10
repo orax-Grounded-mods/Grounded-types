@@ -1,0 +1,60 @@
+---@meta
+
+---@class UAB_Ant_Worker_C : UCharacterAnimInstance
+---@field UberGraphFrame FPointerToUberGraphFrame
+---@field AnimGraphNode_Root FAnimNode_Root
+---@field AnimGraphNode_TransitionResult_10 FAnimNode_TransitionResult
+---@field AnimGraphNode_TransitionResult_9 FAnimNode_TransitionResult
+---@field AnimGraphNode_TransitionResult_8 FAnimNode_TransitionResult
+---@field AnimGraphNode_TransitionResult_7 FAnimNode_TransitionResult
+---@field AnimGraphNode_TransitionResult_6 FAnimNode_TransitionResult
+---@field AnimGraphNode_TransitionResult_5 FAnimNode_TransitionResult
+---@field AnimGraphNode_TransitionResult_4 FAnimNode_TransitionResult
+---@field AnimGraphNode_TransitionResult_3 FAnimNode_TransitionResult
+---@field AnimGraphNode_TransitionResult_2 FAnimNode_TransitionResult
+---@field AnimGraphNode_TransitionResult_1 FAnimNode_TransitionResult
+---@field AnimGraphNode_SequencePlayer_4 FAnimNode_SequencePlayer
+---@field AnimGraphNode_StateResult_5 FAnimNode_StateResult
+---@field AnimGraphNode_SequencePlayer_3 FAnimNode_SequencePlayer
+---@field AnimGraphNode_StateResult_4 FAnimNode_StateResult
+---@field AnimGraphNode_BlendSpacePlayer FAnimNode_BlendSpacePlayer
+---@field AnimGraphNode_StateResult_3 FAnimNode_StateResult
+---@field AnimGraphNode_RandomPlayer FAnimNode_RandomPlayer
+---@field AnimGraphNode_SequencePlayer_2 FAnimNode_SequencePlayer
+---@field AnimGraphNode_BlendListByBool_2 FAnimNode_BlendListByBool
+---@field AnimGraphNode_StateResult_2 FAnimNode_StateResult
+---@field AnimGraphNode_StateMachine_1 FAnimNode_StateMachine
+---@field AnimGraphNode_Slot_1 FAnimNode_Slot
+---@field AnimGraphNode_Slot FAnimNode_Slot
+---@field AnimGraphNode_BlendListByBool_1 FAnimNode_BlendListByBool
+---@field AnimGraphNode_ApplyAdditive FAnimNode_ApplyAdditive
+---@field AnimGraphNode_TransitionResult FAnimNode_TransitionResult
+---@field AnimGraphNode_SequencePlayer_1 FAnimNode_SequencePlayer
+---@field AnimGraphNode_StateResult_1 FAnimNode_StateResult
+---@field AnimGraphNode_SequencePlayer FAnimNode_SequencePlayer
+---@field AnimGraphNode_StateResult FAnimNode_StateResult
+---@field AnimGraphNode_StateMachine FAnimNode_StateMachine
+---@field AnimGraphNode_PowerIK_Ground FAnimNode_PowerIK_Ground
+---@field AnimGraphNode_LocalToComponentSpace FAnimNode_ConvertLocalToComponentSpace
+---@field AnimGraphNode_ComponentToLocalSpace FAnimNode_ConvertComponentToLocalSpace
+---@field AnimGraphNode_BlendListByBool FAnimNode_BlendListByBool
+---@field AnimGraphNode_SaveCachedPose FAnimNode_SaveCachedPose
+---@field AnimGraphNode_UseCachedPose_1 FAnimNode_UseCachedPose
+---@field AnimGraphNode_UseCachedPose FAnimNode_UseCachedPose
+UAB_Ant_Worker_C = {}
+
+---@param AnimGraph FPoseLink
+function UAB_Ant_Worker_C:AnimGraph(AnimGraph) end
+function UAB_Ant_Worker_C:EvaluateGraphExposedInputs_ExecuteUbergraph_AB_Ant_Worker_AnimGraphNode_PowerIK_Ground_AE03F08B49BE8052E0A8079EF8384BA9() end
+function UAB_Ant_Worker_C:EvaluateGraphExposedInputs_ExecuteUbergraph_AB_Ant_Worker_AnimGraphNode_TransitionResult_C31456AA4850C565DFDCDF9186BF6B32() end
+function UAB_Ant_Worker_C:EvaluateGraphExposedInputs_ExecuteUbergraph_AB_Ant_Worker_AnimGraphNode_TransitionResult_3CF2A7F1428A4066E338D985B063C62F() end
+function UAB_Ant_Worker_C:EvaluateGraphExposedInputs_ExecuteUbergraph_AB_Ant_Worker_AnimGraphNode_TransitionResult_462673B7477C44299296E2912D7FD811() end
+function UAB_Ant_Worker_C:EvaluateGraphExposedInputs_ExecuteUbergraph_AB_Ant_Worker_AnimGraphNode_TransitionResult_CC9A2F61497699BD470A35B7480BCA82() end
+function UAB_Ant_Worker_C:EvaluateGraphExposedInputs_ExecuteUbergraph_AB_Ant_Worker_AnimGraphNode_TransitionResult_C42223714FD7BBE962D842B20C31FCFC() end
+function UAB_Ant_Worker_C:EvaluateGraphExposedInputs_ExecuteUbergraph_AB_Ant_Worker_AnimGraphNode_TransitionResult_BF2E0B51401398B0F7F5D1AD8FE3D4DC() end
+function UAB_Ant_Worker_C:EvaluateGraphExposedInputs_ExecuteUbergraph_AB_Ant_Worker_AnimGraphNode_TransitionResult_5FC4616541ED2951D4D2C9BD16F0FDD7() end
+function UAB_Ant_Worker_C:EvaluateGraphExposedInputs_ExecuteUbergraph_AB_Ant_Worker_AnimGraphNode_TransitionResult_52E1E9F94945AF087DBEC7887B8DD830() end
+---@param EntryPoint int32
+function UAB_Ant_Worker_C:ExecuteUbergraph_AB_Ant_Worker(EntryPoint) end
+
+

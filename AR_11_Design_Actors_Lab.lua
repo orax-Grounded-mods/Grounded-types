@@ -1,0 +1,41 @@
+---@meta
+
+---@class AAR_11_Design_Actors_Lab_C : ALevelScriptActor
+---@field UberGraphFrame FPointerToUberGraphFrame
+---@field BP_Control_Panel_Standing_2_ExecuteUbergraph_AR_11_Design_Actors_Lab_RefProperty ABP_Control_Panel_Standing_C
+---@field BP_Control_Panel_Standing3_2_ExecuteUbergraph_AR_11_Design_Actors_Lab_RefProperty ABP_Control_Panel_Standing_C
+---@field BP_Lab_Door_A40_3_ExecuteUbergraph_AR_11_Design_Actors_Lab_RefProperty ABP_Lab_Door_A_C
+---@field BP_Lab_Door_LivingQuarters_ExecuteUbergraph_AR_11_Design_Actors_Lab_RefProperty ABP_Lab_Door_A_C
+---@field BP_Lab_Hatch_A4_ExecuteUbergraph_AR_11_Design_Actors_Lab_RefProperty ABP_Lab_Hatch_A_C
+---@field BP_Lab_Hatch_A_2_ExecuteUbergraph_AR_11_Design_Actors_Lab_RefProperty ABP_Lab_Hatch_A_C
+---@field BP_PondLab_Biodome_Terminal_2_ExecuteUbergraph_AR_11_Design_Actors_Lab_RefProperty ABP_PondLab_Biodome_Terminal_C
+---@field BP_Control_Panel_Standing18_6_ExecuteUbergraph_AR_11_Design_Actors_Lab_RefProperty ABP_Control_Panel_Standing_C
+---@field BP_Control_Panel_Standing19_9_ExecuteUbergraph_AR_11_Design_Actors_Lab_RefProperty ABP_Control_Panel_Standing_C
+AAR_11_Design_Actors_Lab_C = {}
+
+function AAR_11_Design_Actors_Lab_C:ReceiveBeginPlay() end
+---@param IsOpen boolean
+---@param Instigator AActor
+function AAR_11_Design_Actors_Lab_C:SleepingQuartersUnlock(IsOpen, Instigator) end
+---@param IsOpen boolean
+---@param Instigator AActor
+function AAR_11_Design_Actors_Lab_C:OpenLillyPadLabDoor(IsOpen, Instigator) end
+---@param IsOpen boolean
+---@param Instigator AActor
+function AAR_11_Design_Actors_Lab_C:BndEvt__AR_11_Design_Actors_Lab_BP_PondLab_Biodome_Terminal_2_K2Node_ActorBoundEvent_0_OpenStateChangedDelegate__DelegateSignature(IsOpen, Instigator) end
+---@param IsOpen boolean
+---@param Instigator AActor
+function AAR_11_Design_Actors_Lab_C:BndEvt__AR_11_Design_Actors_Lab_BP_Control_Panel_Standing18_6_K2Node_ActorBoundEvent_1_OpenStateChangedDelegate__DelegateSignature(IsOpen, Instigator) end
+---@param IsOpen boolean
+---@param Instigator AActor
+function AAR_11_Design_Actors_Lab_C:BndEvt__AR_11_Design_Actors_Lab_BP_Lab_Hatch_A4_K2Node_ActorBoundEvent_2_OpenStateChangedDelegate__DelegateSignature(IsOpen, Instigator) end
+---@param IsOpen boolean
+---@param Instigator AActor
+function AAR_11_Design_Actors_Lab_C:BndEvt__AR_11_Design_Actors_Lab_BP_Control_Panel_Standing19_9_K2Node_ActorBoundEvent_3_OpenStateChangedDelegate__DelegateSignature(IsOpen, Instigator) end
+---@param IsOpen boolean
+---@param Instigator AActor
+function AAR_11_Design_Actors_Lab_C:BndEvt__AR_11_Design_Actors_Lab_BP_Lab_Hatch_A_2_K2Node_ActorBoundEvent_4_OpenStateChangedDelegate__DelegateSignature(IsOpen, Instigator) end
+---@param EntryPoint int32
+function AAR_11_Design_Actors_Lab_C:ExecuteUbergraph_AR_11_Design_Actors_Lab(EntryPoint) end
+
+

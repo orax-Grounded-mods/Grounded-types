@@ -1,0 +1,71 @@
+---@meta
+
+---@class UAB_Spider_Wolf_C : UCharacterAnimInstance
+---@field UberGraphFrame FPointerToUberGraphFrame
+---@field AnimGraphNode_Root FAnimNode_Root
+---@field AnimGraphNode_TransitionResult_11 FAnimNode_TransitionResult
+---@field AnimGraphNode_TransitionResult_10 FAnimNode_TransitionResult
+---@field AnimGraphNode_TransitionResult_9 FAnimNode_TransitionResult
+---@field AnimGraphNode_TransitionResult_8 FAnimNode_TransitionResult
+---@field AnimGraphNode_TransitionResult_7 FAnimNode_TransitionResult
+---@field AnimGraphNode_TransitionResult_6 FAnimNode_TransitionResult
+---@field AnimGraphNode_TransitionResult_5 FAnimNode_TransitionResult
+---@field AnimGraphNode_TransitionResult_4 FAnimNode_TransitionResult
+---@field AnimGraphNode_TransitionResult_3 FAnimNode_TransitionResult
+---@field AnimGraphNode_TransitionResult_2 FAnimNode_TransitionResult
+---@field AnimGraphNode_SequencePlayer_5 FAnimNode_SequencePlayer
+---@field AnimGraphNode_BlendListByBool_5 FAnimNode_BlendListByBool
+---@field AnimGraphNode_SequencePlayer_4 FAnimNode_SequencePlayer
+---@field AnimGraphNode_StateResult_5 FAnimNode_StateResult
+---@field AnimGraphNode_SequencePlayer_3 FAnimNode_SequencePlayer
+---@field AnimGraphNode_BlendListByBool_4 FAnimNode_BlendListByBool
+---@field AnimGraphNode_SequencePlayer_2 FAnimNode_SequencePlayer
+---@field AnimGraphNode_StateResult_4 FAnimNode_StateResult
+---@field AnimGraphNode_RandomPlayer_1 FAnimNode_RandomPlayer
+---@field AnimGraphNode_BlendListByBool_3 FAnimNode_BlendListByBool
+---@field AnimGraphNode_SequencePlayer_1 FAnimNode_SequencePlayer
+---@field AnimGraphNode_StateResult_3 FAnimNode_StateResult
+---@field AnimGraphNode_BlendSpacePlayer FAnimNode_BlendSpacePlayer
+---@field AnimGraphNode_StateResult_2 FAnimNode_StateResult
+---@field AnimGraphNode_StateMachine_1 FAnimNode_StateMachine
+---@field AnimGraphNode_Slot_1 FAnimNode_Slot
+---@field AnimGraphNode_Slot FAnimNode_Slot
+---@field AnimGraphNode_BlendListByBool_2 FAnimNode_BlendListByBool
+---@field AnimGraphNode_ApplyAdditive FAnimNode_ApplyAdditive
+---@field AnimGraphNode_TransitionResult_1 FAnimNode_TransitionResult
+---@field AnimGraphNode_TransitionResult FAnimNode_TransitionResult
+---@field AnimGraphNode_RandomPlayer FAnimNode_RandomPlayer
+---@field AnimGraphNode_StateResult_1 FAnimNode_StateResult
+---@field AnimGraphNode_SequencePlayer FAnimNode_SequencePlayer
+---@field AnimGraphNode_StateResult FAnimNode_StateResult
+---@field AnimGraphNode_StateMachine FAnimNode_StateMachine
+---@field AnimGraphNode_PowerIK_Ground FAnimNode_PowerIK_Ground
+---@field AnimGraphNode_LocalToComponentSpace FAnimNode_ConvertLocalToComponentSpace
+---@field AnimGraphNode_ComponentToLocalSpace FAnimNode_ConvertComponentToLocalSpace
+---@field AnimGraphNode_SaveCachedPose FAnimNode_SaveCachedPose
+---@field AnimGraphNode_UseCachedPose_2 FAnimNode_UseCachedPose
+---@field AnimGraphNode_UseCachedPose_1 FAnimNode_UseCachedPose
+---@field AnimGraphNode_BlendListByBool_1 FAnimNode_BlendListByBool
+---@field AnimGraphNode_BlendListByBool FAnimNode_BlendListByBool
+---@field AnimGraphNode_UseCachedPose FAnimNode_UseCachedPose
+---@field IsIdleCombat boolean
+---@field ['Owner Ref'] APawn
+UAB_Spider_Wolf_C = {}
+
+---@param AnimGraph FPoseLink
+function UAB_Spider_Wolf_C:AnimGraph(AnimGraph) end
+function UAB_Spider_Wolf_C:EvaluateGraphExposedInputs_ExecuteUbergraph_AB_Spider_Wolf_AnimGraphNode_PowerIK_Ground_C744EC2A4AE6CE50DBB18EBF74976490() end
+function UAB_Spider_Wolf_C:EvaluateGraphExposedInputs_ExecuteUbergraph_AB_Spider_Wolf_AnimGraphNode_TransitionResult_E52ECD15454A88125220A5BC7BE6B0EC() end
+function UAB_Spider_Wolf_C:EvaluateGraphExposedInputs_ExecuteUbergraph_AB_Spider_Wolf_AnimGraphNode_SequencePlayer_E4DDD6AF4384FF59E20FDE9CA96ECDE3() end
+function UAB_Spider_Wolf_C:EvaluateGraphExposedInputs_ExecuteUbergraph_AB_Spider_Wolf_AnimGraphNode_SequencePlayer_1D13AB3B4A8B84CB7BF67D8734576A9C() end
+function UAB_Spider_Wolf_C:EvaluateGraphExposedInputs_ExecuteUbergraph_AB_Spider_Wolf_AnimGraphNode_SequencePlayer_41B8DC5F4FFC8E20D9786FAF0D9FDF76() end
+function UAB_Spider_Wolf_C:EvaluateGraphExposedInputs_ExecuteUbergraph_AB_Spider_Wolf_AnimGraphNode_SequencePlayer_4A0A57CD47A23A257879A1A8ED38BCF4() end
+function UAB_Spider_Wolf_C:EvaluateGraphExposedInputs_ExecuteUbergraph_AB_Spider_Wolf_AnimGraphNode_TransitionResult_AB25B13B45D5A922929D12B004E59232() end
+function UAB_Spider_Wolf_C:EvaluateGraphExposedInputs_ExecuteUbergraph_AB_Spider_Wolf_AnimGraphNode_TransitionResult_3D15B1A543A40093F3AE71AFA92F6F8C() end
+function UAB_Spider_Wolf_C:EvaluateGraphExposedInputs_ExecuteUbergraph_AB_Spider_Wolf_AnimGraphNode_TransitionResult_F845EFF0474D607D50B2328546EDFF66() end
+function UAB_Spider_Wolf_C:EvaluateGraphExposedInputs_ExecuteUbergraph_AB_Spider_Wolf_AnimGraphNode_TransitionResult_413327144584F12ACE50D4A1BCCE24D4() end
+function UAB_Spider_Wolf_C:AnimNotify_IdleVO() end
+---@param EntryPoint int32
+function UAB_Spider_Wolf_C:ExecuteUbergraph_AB_Spider_Wolf(EntryPoint) end
+
+
