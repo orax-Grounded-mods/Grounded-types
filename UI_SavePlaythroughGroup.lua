@@ -1,0 +1,103 @@
+---@meta
+
+---@class UUI_SavePlaythroughGroup_C : UGameUserWidget
+---@field UberGraphFrame FPointerToUberGraphFrame
+---@field SaveCountLoopAnim UWidgetAnimation
+---@field AllSavesBorder UBorder
+---@field AllSavesBox UVerticalBox
+---@field BGBar UImage
+---@field CollapseShowButton UUI_BottomButton_C
+---@field DislikeIcon UImage
+---@field FullBorder UBorder
+---@field HeaderBorder UBorder
+---@field HostLiveImage UImage
+---@field LikeIcon UImage
+---@field LiveHostBar UImage
+---@field LiveHostHeader ULocalizedTextBlock
+---@field LiveHostName UGameTextBlock
+---@field LiveSharedHostOverlay UOverlay
+---@field NewVersionAvailable UImage
+---@field NewVersionText ULocalizedTextBlock
+---@field OwnerSizeBox USizeBox
+---@field OwnerSizeBox_Native USizeBox
+---@field OwnerText UGameTextBlock
+---@field OwnerText_1_Native UGameTextBlock
+---@field PlayerIcon UImage
+---@field PlayerIconBorder UBorder
+---@field PlaygroundIcon UImage
+---@field PlaystationIconImage UImage
+---@field PlaythroughHeaderText UGameTextBlock
+---@field PublishedPlaygroundIcon UImage
+---@field PublishedPlaygroundSave UUI_SaveGameSlot_C
+---@field SavesAndCollapseBox UVerticalBox
+---@field SharedSaveIcon UImage
+---@field SharedSaveOfflineIcon UImage
+---@field SharedSaveOwnerBorder UBorder
+---@field SharedSaveOwnerBorder_Native UBorder
+---@field ShowBackupSavesOverlay UOverlay
+---@field TotalSavesText UGameTextBlock
+---@field UI_SaveGameSlot UUI_SaveGameSlot_C
+---@field PlaythroughGuid FGuid
+---@field IsCollapsed boolean
+---@field OnToggleCollapsed FUI_SavePlaythroughGroup_COnToggleCollapsed
+---@field OnSaveGameClicked FUI_SavePlaythroughGroup_COnSaveGameClicked
+---@field OnSaveGameDoubleClicked FUI_SavePlaythroughGroup_COnSaveGameDoubleClicked
+---@field PlaythroughLocString FLocString
+---@field OpenLocString FLocString
+---@field CloseLocString FLocString
+---@field SharedSaveOwnerString FLocString
+---@field ['Shared Save'] USaveGameHeaderData
+UUI_SavePlaythroughGroup_C = {}
+
+---@param Rating EUserMapRating
+function UUI_SavePlaythroughGroup_C:UpdateUserMapRating(Rating) end
+---@param SaveWidgets TArray<UWidget>
+function UUI_SavePlaythroughGroup_C:GetAllSaveWidgets(SaveWidgets) end
+---@param NumSaves int32
+function UUI_SavePlaythroughGroup_C:GetNumberOfSavesInPlaythrough(NumSaves) end
+---@param Index int32
+---@param AsUI_Save_Game_Slot UUI_SaveGameSlot_C
+function UUI_SavePlaythroughGroup_C:GetSaveAtIndex(Index, AsUI_Save_Game_Slot) end
+function UUI_SavePlaythroughGroup_C:ToggleCollapse() end
+function UUI_SavePlaythroughGroup_C:SelectFirstSave() end
+---@param SaveGameSlot USaveGameSlotWidget
+function UUI_SavePlaythroughGroup_C:SetSelected(SaveGameSlot) end
+---@param Collapse boolean
+function UUI_SavePlaythroughGroup_C:SetCollapsed(Collapse) end
+---@param SaveGameHeader USaveGameHeaderData
+function UUI_SavePlaythroughGroup_C:SetPlaythroughHeaderViaSave(SaveGameHeader) end
+---@param Save USaveGameHeaderData
+function UUI_SavePlaythroughGroup_C:AddSave(Save) end
+---@param Texture UTexture2DDynamic
+function UUI_SavePlaythroughGroup_C:OnFail_F13C9AEE4A5AB670B1F45C95F542B474(Texture) end
+---@param Texture UTexture2DDynamic
+function UUI_SavePlaythroughGroup_C:OnSuccess_F13C9AEE4A5AB670B1F45C95F542B474(Texture) end
+---@param Results TArray<FBlueprintUserOnlineAccountResult>
+function UUI_SavePlaythroughGroup_C:OnFailure_BBC008074112373047388EA5C1AF6C5D(Results) end
+---@param Results TArray<FBlueprintUserOnlineAccountResult>
+function UUI_SavePlaythroughGroup_C:OnSuccess_BBC008074112373047388EA5C1AF6C5D(Results) end
+---@param SaveGameSlot UUI_SaveGameSlot_C
+function UUI_SavePlaythroughGroup_C:SaveGameClicked(SaveGameSlot) end
+---@param SaveGameSlot UUI_SaveGameSlot_C
+function UUI_SavePlaythroughGroup_C:SaveGameDoubleClicked(SaveGameSlot) end
+function UUI_SavePlaythroughGroup_C:OnGlobalColorChange() end
+function UUI_SavePlaythroughGroup_C:BndEvt__UI_BottomButton_K2Node_ComponentBoundEvent_1_OnNormalButtonClicked__DelegateSignature() end
+function UUI_SavePlaythroughGroup_C:Construct() end
+---@param SharedSave USaveGameHeaderData
+function UUI_SavePlaythroughGroup_C:IntializeSharedSaveInfo(SharedSave) end
+function UUI_SavePlaythroughGroup_C:RefreshColors() end
+---@param SharedSave USaveGameHeaderData
+function UUI_SavePlaythroughGroup_C:UpdateSharedFriendsCount(SharedSave) end
+function UUI_SavePlaythroughGroup_C:UpdateNewVersionVisuals() end
+function UUI_SavePlaythroughGroup_C:Destruct() end
+---@param EntryPoint int32
+function UUI_SavePlaythroughGroup_C:ExecuteUbergraph_UI_SavePlaythroughGroup(EntryPoint) end
+---@param SaveGameSlot UUI_SaveGameSlot_C
+function UUI_SavePlaythroughGroup_C:OnSaveGameDoubleClicked__DelegateSignature(SaveGameSlot) end
+---@param SaveGameSlot UUI_SaveGameSlot_C
+function UUI_SavePlaythroughGroup_C:OnSaveGameClicked__DelegateSignature(SaveGameSlot) end
+---@param SavePlaythroughGroup UUI_SavePlaythroughGroup_C
+---@param Collapsed boolean
+function UUI_SavePlaythroughGroup_C:OnToggleCollapsed__DelegateSignature(SavePlaythroughGroup, Collapsed) end
+
+

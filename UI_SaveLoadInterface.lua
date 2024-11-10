@@ -1,0 +1,351 @@
+---@meta
+
+---@class UUI_SaveLoadInterface_C : USaveLoadWidget
+---@field UberGraphFrame FPointerToUberGraphFrame
+---@field LoopWarningAnim UWidgetAnimation
+---@field Open UWidgetAnimation
+---@field BestAllTimeTab UUI_TabButton_C
+---@field BG UImage
+---@field CannotSaveReasonText UGameTextBlock
+---@field CloseButton UUI_BottomButton_C
+---@field ConvertToSharedSaveButton UUI_BottomButton_C
+---@field CreateStandardCopyButton UUI_BottomButton_C
+---@field DeleteButton UUI_BottomButton_C
+---@field DeletePlaythroughButton UUI_BottomButton_C
+---@field DownloadBrowserPlaygroundButton UUI_BottomButton_C
+---@field DownloadDesignCopyButton UUI_BottomButton_C
+---@field DownloadPlaygroundViaCodeButton UUI_BottomButton_C
+---@field DownloadsTab UUI_TabButton_C
+---@field DownvotePlayground UUI_BottomButton_C
+---@field ExportSaveButton UUI_BottomButton_C
+---@field FilterPlaygroundsButton UUI_BottomButton_C
+---@field LoadButton UUI_BottomButton_C
+---@field LoadingCloudSavesThrobber UCircularThrobber
+---@field LoadingSavesText ULocalizedTextBlock
+---@field ManageSharedSaveFriendsButton UUI_BottomButton_C
+---@field NewestTab UUI_TabButton_C
+---@field NumPublishedPlaygroundsText UGameTextBlock
+---@field OnlineAccountRequiredText ULocalizedTextBlock
+---@field PageLabel UGameTextBlock
+---@field PlaygroundBrowserTabs UHorizontalBox
+---@field ProcessingSharedSaveCommandBox UHorizontalBox
+---@field ProcessingSharedSaveCommandTest ULocalizedTextBlock
+---@field ProcessingSharedSaveCommandThrobber UCircularThrobber
+---@field PublishedPlaygroundsCountWrap UBorder
+---@field PublishedPlaygroundsHorizBox UHorizontalBox
+---@field PublishPlaygroundButton UUI_BottomButton_C
+---@field RecentHitsTab UUI_TabButton_C
+---@field RemoveDownvotePlayground UUI_BottomButton_C
+---@field RemoveUpVotePlayground UUI_BottomButton_C
+---@field RenamePlaythroughButton UUI_BottomButton_C
+---@field RenameSaveButton UUI_BottomButton_C
+---@field ReportPlaygroundButton UUI_BottomButton_C
+---@field SaveButton UUI_BottomButton_C
+---@field SaveGameScrollBox UScrollBox
+---@field SaveGameVerticalBox UVerticalBox
+---@field SharedSaveWrap UBorder
+---@field SharedWorldImage UImage
+---@field SharedWorldImage_1 UImage
+---@field SharedWorldKey UHorizontalBox
+---@field SharedWorldLocString ULocalizedTextBlock
+---@field StripBG UImage
+---@field TabBox UHorizontalBox
+---@field TabNext UUI_HUDActionWidget_C
+---@field TabPrevious UUI_HUDActionWidget_C
+---@field TopMonthlyTab UUI_TabButton_C
+---@field UGCNextPageButton UUI_BottomButton_C
+---@field UGCPreviousPageButton UUI_BottomButton_C
+---@field UI_PopupBGLarge UUI_PopupBGLarge_C
+---@field UnpublishPlayground UUI_BottomButton_C
+---@field UnshareWorldButton UUI_BottomButton_C
+---@field UpdateVersion UUI_BottomButton_C
+---@field UpvotePlayground UUI_BottomButton_C
+---@field WindowHeader UUI_HeaderText_C
+---@field SelectedSaveGame UUI_SaveGameSlot_C
+---@field SaveTitleString FLocString
+---@field LoadTitleString FLocString
+---@field DeleteSaveConfirmationTitle FLocString
+---@field OnLoadGameSelected FUI_SaveLoadInterface_COnLoadGameSelected
+---@field DeleteSaveConfirmationBody FLocString
+---@field CanSaveResult ESaveLoadRestriction
+---@field CannotSaveAnotherSaveInProgressText FLocString
+---@field CannotSaveNoPlayerCharacterFoundText FLocString
+---@field CannotSaveYouAreInCombatText FLocString
+---@field CannotSaveCutsceneIsPlayingText FLocString
+---@field CannotSaveYouAreCurrentlyFallingText FLocString
+---@field LastDeletedSavedGameIndex int32
+---@field OverwriteSaveGameTitle FLocString
+---@field OverwriteSaveGameBody FLocString
+---@field CannotSaveDeviceFull FLocString
+---@field HasPopulated boolean
+---@field ExportSaveTitle FLocString
+---@field ExportSaveBody FLocString
+---@field SaveGameToSelectPostRepopulate USaveGameHeaderData
+---@field CannotSaveYourBaseIsUnderAttack FLocString
+---@field RenameSaveLocString FLocString
+---@field RenamePlaythroughLocString FLocString
+---@field PlaythroughLocString FLocString
+---@field HostedSharedSaveTitle FLocString
+---@field HostedSharedSaveBody FLocString
+---@field UnshareWorldTitle FLocString
+---@field UnshareWorldBody FLocString
+---@field CannotUnshareWorldTitle FLocString
+---@field CannotUnshareWorldBody FLocString
+---@field CannotLoadSharedWorldSinglePlayerTitle FLocString
+---@field CannotLoadSharedWorldSingleplayerBody FLocString
+---@field MaxSharedWorldsOwnedTitle FLocString
+---@field MaxSharedWorldsOwnedBody FLocString
+---@field ConvertToSharedWorldsTitle FLocString
+---@field ConvertToSharedWorldsBody FLocString
+---@field ConvertToSharedWorldPriorToDeleteTitle FLocString
+---@field ConvertToSharedWorldPriorToDeleteBody FLocString
+---@field CantCreateStandardCopyTitle FLocString
+---@field CantCreateStandardCopyBody FLocString
+---@field DeleteSharedSaveTitle FLocString
+---@field DeleteSharedSaveBody FLocString
+---@field CantCreateSharedCopyTitle FLocString
+---@field CantCreateSharedCopyBody FLocString
+---@field SaveImportFailedTitle FLocString
+---@field SaveImportFailedBody FLocString
+---@field CantRenameHostedSharedSaveTitle FLocString
+---@field CantRenameHostedSharedSaveBody FLocString
+---@field CannotDeleteHostedSharedSaveTitle FLocString
+---@field CannotDeleteHostedSharedSaveBody FLocString
+---@field CannotImportSaveTitle FLocString
+---@field CannotImportSaveBody FLocString
+---@field WasProcessingSharedSaveCommand boolean
+---@field CannotSavePlayerDrivenConversationActive FLocString
+---@field TooManySavesTitle FLocString
+---@field TooManySavesBody FLocString
+---@field TooManySavesBodyEarlyAccessIncluded FLocString
+---@field HostedSharedSaveToJoin USaveGameHeaderData
+---@field PublishUserMapSavePostRename boolean
+---@field SaveDataLimitReachedTitle FLocString
+---@field SaveDataLimitReachedBodySwitch FLocString
+---@field SaveDataLimitReachedBodySony FLocString
+UUI_SaveLoadInterface_C = {}
+
+function UUI_SaveLoadInterface_C:RefreshUserMapVoteButtons() end
+---@return boolean
+function UUI_SaveLoadInterface_C:ShouldFilterSavesByPlaythroughGuid() end
+function UUI_SaveLoadInterface_C:ResetSaveGameVerticalBoxContents() end
+function UUI_SaveLoadInterface_C:TryLogRemainingStorage() end
+function UUI_SaveLoadInterface_C:TryMakeCreateNewSaveWidget() end
+---@return boolean
+function UUI_SaveLoadInterface_C:HasSaveSelected() end
+---@return boolean
+function UUI_SaveLoadInterface_C:IsSelectedSaveOwnPublishedPlayground() end
+function UUI_SaveLoadInterface_C:PreviousCommunityTab() end
+function UUI_SaveLoadInterface_C:AdvanceCommunityTab() end
+---@return boolean
+function UUI_SaveLoadInterface_C:IsSelectedSaveDownloadedPlayground() end
+---@param FromGlobalBrowser boolean
+---@return boolean
+function UUI_SaveLoadInterface_C:IsSelectedSavePublishedPlayground(FromGlobalBrowser) end
+---@param ChecksPassed boolean
+function UUI_SaveLoadInterface_C:HandleSharedWorldLoadingChecks(ChecksPassed) end
+function UUI_SaveLoadInterface_C:RefreshSaveButtonValidity() end
+---@param WindowHeaderText FText
+function UUI_SaveLoadInterface_C:GetWindowHeaderText(WindowHeaderText) end
+---@param CanLoad boolean
+function UUI_SaveLoadInterface_C:CanLoadSelectedSave(CanLoad) end
+---@return boolean
+UUI_SaveLoadInterface_C['Selected User Map Save Has New Version Available'] = function() end
+---@param AttemptingPublish boolean
+function UUI_SaveLoadInterface_C:ShowRequiresLoginPlaygroundError(AttemptingPublish) end
+---@return boolean
+function UUI_SaveLoadInterface_C:CanUnpublishSelectedSave() end
+---@param CanPublish boolean
+function UUI_SaveLoadInterface_C:CanPublishSelectedSave(CanPublish) end
+---@return boolean
+function UUI_SaveLoadInterface_C:IsSelectedSaveSharedWorldBackup() end
+---@return USaveGameHeaderData
+function UUI_SaveLoadInterface_C:GetMasterSharedSaveForSelectedSave() end
+---@param ScrollWidget UScrollBox
+function UUI_SaveLoadInterface_C:SetScrollStyle(ScrollWidget) end
+---@param AtMax boolean
+function UUI_SaveLoadInterface_C:IsAtMaxAllowedSaves(AtMax) end
+---@param SaveGameHeader USaveGameHeaderData
+---@param Playthrough UUI_SavePlaythroughGroup_C
+function UUI_SaveLoadInterface_C:GetSaveGameSlotForHeader(SaveGameHeader, Playthrough) end
+---@param CanExport boolean
+function UUI_SaveLoadInterface_C:CanExportSelectedSave(CanExport) end
+UUI_SaveLoadInterface_C['Handle Save Import'] = function() end
+---@param Selection UUI_SaveGameSlot_C
+function UUI_SaveLoadInterface_C:SetSelectedSaveGame(Selection) end
+---@param InChord FInputChord
+---@return boolean
+function UUI_SaveLoadInterface_C:HandleKeyEventChord(InChord) end
+---@param MakeStandardSaveCopyFirst boolean
+---@param SaveHeaderToDelete USaveGameHeaderData
+function UUI_SaveLoadInterface_C:OnAcceptDeleteSave(MakeStandardSaveCopyFirst, SaveHeaderToDelete) end
+---@param SaveGameHeader USaveGameHeaderData
+---@param Playthrough UUI_SavePlaythroughGroup_C
+function UUI_SaveLoadInterface_C:GetPlaythroughForSave(SaveGameHeader, Playthrough) end
+function UUI_SaveLoadInterface_C:ToggleSelectedPlaythrough() end
+---@param SavePlaythroughGroup UUI_SavePlaythroughGroup_C
+---@param Collapsed boolean
+function UUI_SaveLoadInterface_C:OnPlaythroughCollapseToggled(SavePlaythroughGroup, Collapsed) end
+---@return UWidget
+function UUI_SaveLoadInterface_C:GetDefaultUserFocus() end
+---@param SaveGameSlot UUI_SaveGameSlot_C
+function UUI_SaveLoadInterface_C:OnSavedGameDoubleClicked(SaveGameSlot) end
+---@param SaveGameSlot UUI_SaveGameSlot_C
+function UUI_SaveLoadInterface_C:OnSavedGameClicked(SaveGameSlot) end
+---@param JustSaved boolean
+---@param PopulateEmpty boolean
+function UUI_SaveLoadInterface_C:PopulateSaveGames(JustSaved, PopulateEmpty) end
+function UUI_SaveLoadInterface_C:OnFailure_4EF9E454487B9B58D7F25C9C2277F86B() end
+---@param bGranted boolean
+---@param DenyReason EOnlineUserPrivilegeDenyReason
+function UUI_SaveLoadInterface_C:OnSuccess_4EF9E454487B9B58D7F25C9C2277F86B(bGranted, DenyReason) end
+function UUI_SaveLoadInterface_C:OnFailure_87FDAC604854683DD68F6BB6C9180612() end
+---@param bGranted boolean
+---@param DenyReason EOnlineUserPrivilegeDenyReason
+function UUI_SaveLoadInterface_C:OnSuccess_87FDAC604854683DD68F6BB6C9180612(bGranted, DenyReason) end
+function UUI_SaveLoadInterface_C:OnFailure_4EF9E454487B9B58D7F25C9C2EA506B7() end
+---@param bGranted boolean
+---@param DenyReason EOnlineUserPrivilegeDenyReason
+function UUI_SaveLoadInterface_C:OnSuccess_4EF9E454487B9B58D7F25C9C2EA506B7(bGranted, DenyReason) end
+function UUI_SaveLoadInterface_C:OnFailure_87FDAC604854683DD68F6BB6C5CAF8CE() end
+---@param bGranted boolean
+---@param DenyReason EOnlineUserPrivilegeDenyReason
+function UUI_SaveLoadInterface_C:OnSuccess_87FDAC604854683DD68F6BB6C5CAF8CE(bGranted, DenyReason) end
+function UUI_SaveLoadInterface_C:OnFailure_4EF9E454487B9B58D7F25C9C5244B0DD() end
+---@param bGranted boolean
+---@param DenyReason EOnlineUserPrivilegeDenyReason
+function UUI_SaveLoadInterface_C:OnSuccess_4EF9E454487B9B58D7F25C9C5244B0DD(bGranted, DenyReason) end
+function UUI_SaveLoadInterface_C:OnFailure_87FDAC604854683DD68F6BB6B92B4EA4() end
+---@param bGranted boolean
+---@param DenyReason EOnlineUserPrivilegeDenyReason
+function UUI_SaveLoadInterface_C:OnSuccess_87FDAC604854683DD68F6BB6B92B4EA4(bGranted, DenyReason) end
+function UUI_SaveLoadInterface_C:OnFailure_4EF9E454487B9B58D7F25C9C2750B0BB() end
+---@param bGranted boolean
+---@param DenyReason EOnlineUserPrivilegeDenyReason
+function UUI_SaveLoadInterface_C:OnSuccess_4EF9E454487B9B58D7F25C9C2750B0BB(bGranted, DenyReason) end
+function UUI_SaveLoadInterface_C:OnFailure_87FDAC604854683DD68F6BB6CC3F4EC2() end
+---@param bGranted boolean
+---@param DenyReason EOnlineUserPrivilegeDenyReason
+function UUI_SaveLoadInterface_C:OnSuccess_87FDAC604854683DD68F6BB6CC3F4EC2(bGranted, DenyReason) end
+function UUI_SaveLoadInterface_C:Construct() end
+function UUI_SaveLoadInterface_C:BndEvt__SaveButton_K2Node_ComponentBoundEvent_0_OnNormalButtonClicked__DelegateSignature() end
+function UUI_SaveLoadInterface_C:BndEvt__CloseButton_K2Node_ComponentBoundEvent_1_OnNormalButtonClicked__DelegateSignature() end
+---@param SaveResult ESaveGameResult
+---@param SaveGameType ESaveGameType
+function UUI_SaveLoadInterface_C:OnSaveComplete(SaveResult, SaveGameType) end
+function UUI_SaveLoadInterface_C:BndEvt__LoadButton_K2Node_ComponentBoundEvent_2_OnNormalButtonClicked__DelegateSignature() end
+function UUI_SaveLoadInterface_C:CloseUI() end
+function UUI_SaveLoadInterface_C:LoadSelectedSaveGame() end
+function UUI_SaveLoadInterface_C:BndEvt__DeleteButton_K2Node_ComponentBoundEvent_3_OnNormalButtonClicked__DelegateSignature() end
+function UUI_SaveLoadInterface_C:RequestDeleteSelectedSaveGame() end
+function UUI_SaveLoadInterface_C:OnDeleteComplete() end
+function UUI_SaveLoadInterface_C:Destruct() end
+function UUI_SaveLoadInterface_C:OnMenuModeSet() end
+function UUI_SaveLoadInterface_C:OnGlobalColorChange() end
+function UUI_SaveLoadInterface_C:SaveNewGame() end
+---@param MyGeometry FGeometry
+---@param InDeltaTime float
+function UUI_SaveLoadInterface_C:Tick(MyGeometry, InDeltaTime) end
+function UUI_SaveLoadInterface_C:HandleCanSaveChanged() end
+function UUI_SaveLoadInterface_C:OnLoadSaveGameHeadersComplete() end
+function UUI_SaveLoadInterface_C:OnAcceptOverriteSaveGame() end
+function UUI_SaveLoadInterface_C:ExportSave() end
+function UUI_SaveLoadInterface_C:BndEvt__ExportSaveButton_K2Node_ComponentBoundEvent_4_OnNormalButtonClicked__DelegateSignature() end
+function UUI_SaveLoadInterface_C:BndEvt__UI_SaveLoadInterface_ExportSaveButton_1_K2Node_ComponentBoundEvent_5_OnNormalButtonClicked__DelegateSignature() end
+function UUI_SaveLoadInterface_C:BndEvt__UI_SaveLoadInterface_RenameSaveButton_K2Node_ComponentBoundEvent_6_OnNormalButtonClicked__DelegateSignature() end
+function UUI_SaveLoadInterface_C:OnRenameSaveSelected() end
+---@param UserText FString
+function UUI_SaveLoadInterface_C:OnSaveRenamed(UserText) end
+function UUI_SaveLoadInterface_C:OnHeaderDataUpdateComplete() end
+function UUI_SaveLoadInterface_C:BndEvt__UI_SaveLoadInterface_RenamePlaythroughButton_K2Node_ComponentBoundEvent_7_OnNormalButtonClicked__DelegateSignature() end
+function UUI_SaveLoadInterface_C:RenamePlaythroughSelected() end
+---@param UserText FString
+function UUI_SaveLoadInterface_C:OnRenamePlaythrough(UserText) end
+function UUI_SaveLoadInterface_C:ManageSharedSaves() end
+function UUI_SaveLoadInterface_C:NotifySharedSaveAlreadyHosted() end
+function UUI_SaveLoadInterface_C:JoinSharedSave() end
+function UUI_SaveLoadInterface_C:BndEvt__UI_SaveLoadInterface_UnshareWorldButton_K2Node_ComponentBoundEvent_8_OnNormalButtonClicked__DelegateSignature() end
+function UUI_SaveLoadInterface_C:OnAcceptUnshareWorld() end
+function UUI_SaveLoadInterface_C:BndEvt__UI_SaveLoadInterface_ConvertToSharedSaveButton_K2Node_ComponentBoundEvent_9_OnNormalButtonClicked__DelegateSignature() end
+function UUI_SaveLoadInterface_C:ConvertStandardSaveToSharedSave() end
+function UUI_SaveLoadInterface_C:OnAcceptConvertToSharedWorld() end
+function UUI_SaveLoadInterface_C:BndEvt__UI_SaveLoadInterface_CreateStandardCopyButton_K2Node_ComponentBoundEvent_10_OnNormalButtonClicked__DelegateSignature() end
+function UUI_SaveLoadInterface_C:CreateStandardSaveCopy() end
+function UUI_SaveLoadInterface_C:DeleteSaveRequested() end
+function UUI_SaveLoadInterface_C:BndEvt__UI_SaveLoadInterface_ImportSaveButton_K2Node_ComponentBoundEvent_11_OnNormalButtonClicked__DelegateSignature() end
+function UUI_SaveLoadInterface_C:HandleImportSaveRequest() end
+function UUI_SaveLoadInterface_C:OnAcceptOverwriteOldestSave() end
+---@param Sender UWindowWidget
+function UUI_SaveLoadInterface_C:ManageSharedFriendsClosed(Sender) end
+function UUI_SaveLoadInterface_C:NotifyLoadingSharedWorldBackupSave() end
+function UUI_SaveLoadInterface_C:OnAcceptLoadSharedWorldBackupSave() end
+---@param OptionalSaveGameHeader USaveGameHeaderData
+function UUI_SaveLoadInterface_C:HandleLoadSelectedSave(OptionalSaveGameHeader) end
+function UUI_SaveLoadInterface_C:HandleCannotLoadSharedWorldSingleplayer() end
+function UUI_SaveLoadInterface_C:HandleLoadSharedWorldBackupMissingMaster() end
+function UUI_SaveLoadInterface_C:HandleLoadSharedWorldWhileOffline() end
+function UUI_SaveLoadInterface_C:DontJoinSharedSave() end
+function UUI_SaveLoadInterface_C:BndEvt__UI_SaveLoadInterface_PublishPlaygroundButton_K2Node_ComponentBoundEvent_12_OnNormalButtonClicked__DelegateSignature() end
+function UUI_SaveLoadInterface_C:BndEvt__UI_SaveLoadInterface_DownloadPlaygroundButton_K2Node_ComponentBoundEvent_13_OnNormalButtonClicked__DelegateSignature() end
+---@param UserText FString
+function UUI_SaveLoadInterface_C:OnPlaygroundCodeSubmitted(UserText) end
+---@param PublishedHeader USaveGameHeaderData
+function UUI_SaveLoadInterface_C:OnUserMapPublishedComplete(PublishedHeader) end
+function UUI_SaveLoadInterface_C:OnUserMapDownloadCopyFailure() end
+function UUI_SaveLoadInterface_C:OnUserMapDownloadCopySuccess() end
+function UUI_SaveLoadInterface_C:BndEvt__UI_SaveLoadInterface_DownloadPlaygroundButton_1_K2Node_ComponentBoundEvent_14_OnNormalButtonClicked__DelegateSignature() end
+function UUI_SaveLoadInterface_C:OnCancelPlaythroughRename() end
+function UUI_SaveLoadInterface_C:PublishSelectedPlayground() end
+function UUI_SaveLoadInterface_C:OpenDownloadPlaygroundWindow() end
+function UUI_SaveLoadInterface_C:UpdateSelectedPlaygroundToLatestVersion() end
+function UUI_SaveLoadInterface_C:PlaygroundWarnAndAskForPlaythroughRename() end
+function UUI_SaveLoadInterface_C:OnPlayInDesignMode() end
+function UUI_SaveLoadInterface_C:OnPlayInPlayMode() end
+function UUI_SaveLoadInterface_C:BndEvt__UI_SaveLoadInterface_DownloadPlaygroundButton_1_K2Node_ComponentBoundEvent_15_OnNormalButtonClicked__DelegateSignature() end
+---@param AsDesignCopy boolean
+function UUI_SaveLoadInterface_C:DownloadSelectedPublishedPlayground(AsDesignCopy) end
+---@param TabButton UUI_TabButton_C
+function UUI_SaveLoadInterface_C:BndEvt__UI_SaveLoadInterface_DownloadsTab_K2Node_ComponentBoundEvent_16_OnNormalButtonClicked__DelegateSignature(TabButton) end
+---@param TabButton UUI_TabButton_C
+function UUI_SaveLoadInterface_C:BndEvt__UI_SaveLoadInterface_RecentHitsTab_K2Node_ComponentBoundEvent_17_OnNormalButtonClicked__DelegateSignature(TabButton) end
+---@param TabButton UUI_TabButton_C
+function UUI_SaveLoadInterface_C:BndEvt__UI_SaveLoadInterface_TopMonthlyTab_K2Node_ComponentBoundEvent_18_OnNormalButtonClicked__DelegateSignature(TabButton) end
+---@param TabButton UUI_TabButton_C
+function UUI_SaveLoadInterface_C:BndEvt__UI_SaveLoadInterface_BestAllTimeTab_K2Node_ComponentBoundEvent_19_OnNormalButtonClicked__DelegateSignature(TabButton) end
+---@param TabButton UUI_TabButton_C
+function UUI_SaveLoadInterface_C:BndEvt__UI_SaveLoadInterface_NewestTab_K2Node_ComponentBoundEvent_20_OnNormalButtonClicked__DelegateSignature(TabButton) end
+---@param TabButton UUI_TabButton_C
+function UUI_SaveLoadInterface_C:SetTabButtonActive(TabButton) end
+function UUI_SaveLoadInterface_C:BndEvt__UI_SaveLoadInterface_DownloadBrowserPlaygroundButton_K2Node_ComponentBoundEvent_21_OnNormalButtonClicked__DelegateSignature() end
+function UUI_SaveLoadInterface_C:OnCommunityPlaygroundsCategorySet() end
+function UUI_SaveLoadInterface_C:BndEvt__UI_SaveLoadInterface_FilterPlaygroundsButton_K2Node_ComponentBoundEvent_22_OnNormalButtonClicked__DelegateSignature() end
+function UUI_SaveLoadInterface_C:BndEvt__UI_SaveLoadInterface_ReportPlaygroundButton_K2Node_ComponentBoundEvent_23_OnNormalButtonClicked__DelegateSignature() end
+function UUI_SaveLoadInterface_C:PlaygroundWarnMissingDetails() end
+function UUI_SaveLoadInterface_C:OnDetailsMissingAccept() end
+function UUI_SaveLoadInterface_C:WarnMaxPublishedPlaygrounds() end
+function UUI_SaveLoadInterface_C:BndEvt__UI_SaveLoadInterface_ExportSaveButton_1_K2Node_ComponentBoundEvent_24_OnNormalButtonClicked__DelegateSignature() end
+function UUI_SaveLoadInterface_C:BndEvt__UI_SaveLoadInterface_UGCPreviousPageButton_K2Node_ComponentBoundEvent_25_OnNormalButtonClicked__DelegateSignature() end
+function UUI_SaveLoadInterface_C:UpdatePageVisuals() end
+function UUI_SaveLoadInterface_C:IncrementBrowserPage() end
+function UUI_SaveLoadInterface_C:DecrementBrowserPage() end
+function UUI_SaveLoadInterface_C:ReportPlayground() end
+function UUI_SaveLoadInterface_C:OpenFilterWindow() end
+function UUI_SaveLoadInterface_C:OnSaveDataExceededLimitFailure() end
+function UUI_SaveLoadInterface_C:ResumeActivity() end
+function UUI_SaveLoadInterface_C:BndEvt__UI_SaveLoadInterface_RatePlayground_K2Node_ComponentBoundEvent_26_OnNormalButtonClicked__DelegateSignature() end
+function UUI_SaveLoadInterface_C:UpvoteSelectedPlayground() end
+function UUI_SaveLoadInterface_C:BndEvt__UI_SaveLoadInterface_DownvotePlayground_K2Node_ComponentBoundEvent_27_OnNormalButtonClicked__DelegateSignature() end
+function UUI_SaveLoadInterface_C:DownvoteSelectedPlayground() end
+function UUI_SaveLoadInterface_C:BndEvt__UI_SaveLoadInterface_RemoveUpVotePlayground_K2Node_ComponentBoundEvent_28_OnNormalButtonClicked__DelegateSignature() end
+function UUI_SaveLoadInterface_C:BndEvt__UI_SaveLoadInterface_RemoveDownvotePlayground_K2Node_ComponentBoundEvent_29_OnNormalButtonClicked__DelegateSignature() end
+function UUI_SaveLoadInterface_C:RemoveVote() end
+function UUI_SaveLoadInterface_C:ShowPlaygroundRatingConfirmation() end
+---@param Rating EUserMapRating
+function UUI_SaveLoadInterface_C:SetSelectedUserMapRating(Rating) end
+---@param bLoaded boolean
+function UUI_SaveLoadInterface_C:SetLoadButtonVisiblity(bLoaded) end
+---@param EntryPoint int32
+function UUI_SaveLoadInterface_C:ExecuteUbergraph_UI_SaveLoadInterface(EntryPoint) end
+function UUI_SaveLoadInterface_C:OnLoadGameSelected__DelegateSignature() end
+
+
